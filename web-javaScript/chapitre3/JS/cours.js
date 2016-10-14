@@ -1,0 +1,1 @@
+document.getElementById("contenu").innerHTML += '<a href = "http://sofoot.com" id="premierLien">"So Foot" </a>';
