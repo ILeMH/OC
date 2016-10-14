@@ -1,0 +1,39 @@
+AVANT :
+
+* Benchmark
+* SWOT
+* Analyse concurrence
+
+NOTE DE CADRAGE :
+
+* Rappel des enjeux et objectifs
+* Préconisation fonctionnels
+	- Pour le site
+	- Pour le client
+* Préconisation d'architecture
+* Principaux livrables : 	Organigramme des tâches
+* Futurs utilisateurs :		Impact mapping
+* Solutions techniques :	Langages ? CMS ? On justifie
+* Planning
+* Budget
+
+PROPOSITION COMMERCIALE :
+
+* Note de cadrage synthétisée
+* Présentation société
+* Présentation de l'équipe
+* Méthodo
+* Devis
+* Planning
+
+SCHENARIO :
+
+Fréderic Pichet,organisateur du salon de l'oenologie de Bordeaux
+souhaite faire développer un site web pour communiquer sur son
+évènement : dans 6 mois.
+On y présente :
+	* Liste des exposants
+	* Carte des exposants
+	* Intervenants prévus lors de la table ronde
+	* Liste des retombés presse et actualités
+Il souhaite que les billets puissent être acheté en ligne
