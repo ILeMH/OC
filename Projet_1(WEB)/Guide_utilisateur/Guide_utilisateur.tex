@@ -1,0 +1,72 @@
+\documentclass[12pt]{report}
+
+\usepackage[latin1]{inputenc}    
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{graphicx}
+
+\title{Guide de l'utilisateur :}
+\author{Alexandre SCHANNE}
+\date{11 Octobre 2016}
+
+\begin{document}
+\maketitle
+\pagestyle{headings}
+\part{Les Comptes :}
+\chapter{Le compte administrateur :}
+		Le comtpe administrateur dispose de tous les droits. Il peut modifier le site à 100\%. Parmit les outils disponibles, l'administrateur peut utiliser :
+\begin{itemize}
+	\item \textbf{Page} pour éditer ou modifier une page. Celle-ci pourra ensuite être inséré au menu ou non.
+	\item \textbf{Article} pour éditer ou modifier un article. Par défaut le dernier article apparaitra sur la page principale et dans le carousel de la page "<actualité">.
+	\item \textbf{Commentaire} pour valider ou supprimer un commentaire envoyé par les visiteurs.
+	\item \textbf{Contact} pour modifier ou créer et déployer un formulaire sur le site. Ceux-ci servent ensuite à récupérer des informations par e-mail comme avec la page "<Contact"> et "<Activité du mois"> lors de l'inscription.
+	\item \textbf{TablePress} sert à créer un tableau comme dans "<Activité du mois">.
+	\item \textbf{Apparence} pour modifier la mise en page du site, mais aussi rajouter des boutons, widgets et autre. On a aussi accès à l'espace reservé aux thèmes, ainsi on peut modifier litéralement son thème.	
+	\item \textbf{Extension} est la page de gestion des extensions instalées, on peut aussi en ajouter de nouvelles.
+	\item \textbf{Utilisateur} permet la gestion des comptes. Le site a été livré avec 3 types de comptes : un administrateur, deux éditeurs et trois contributeurs.	
+\end{itemize}
+Les autres options étant principalement des paramètrages, il est recommandé de ne pas les manipuler à moins que vous sachiez ce que vous faites.\\
+La page de l'administrateur est de la sorte :\\
+\includegraphics[scale = 0.4]{administrateur}\\
+\textit{A noter :} le rôle de l'administrateur est de maintenir le site en toute sécurité, il est recommander de vérifier quotidiennement si des mises à jours de WordPress ou d'autres extensions sont à effectuer. En cas contraire, il est bon de rappeler qu'un site obsolète est plus sensible aux cyber-attaques.
+\chapter{Editeur}
+			Les comptes "Editeur" ont la particularité qu'ils peuvent éditer mais aussi publier des articles sur le site. Comme pour l'administrateur, la publication d'un article le positionnera en article de page principale et aussi dans le carousel. Il est possible pour un éditeur de modifier un article déjà publié, par une autre personne que lui.
+Aussi, si l'administrateur veut modifier le contenu de l'article, celui-ci prendra la main sur l'article et l'éditeur n'y aura plus accès.\\
+\textit{A noter :} l'administrateur peut prendre le contrôle de l'article pour modifier avant publication l'auteur de l'article grâce au menu déroulant de bas de page.\\
+La page d'accueil de l'éditeur est de la sorte :\\
+\\
+\includegraphics[scale = 0.39]{auteur}\\
+\chapter{Contributeur :}
+			Le compte contributeur est fait pour proposer des articles. Il peut les éditer mais pas les publier. Suite à celà, une verification devra être établie pour publier ou non l'article. Le rôle du contributeur dispose donc de moins de droit que les deux autres comptes.\\
+Le contributeur a tout de même accès aux commentaires et à certaines obtions de créations.\\
+La page d'accueil du contributeur est de la sorte :\\
+\includegraphics[scale = 0.4]{contributeur}\\
+
+\part{Les pages :}
+\section{La page d'accueil :}
+La page d'accueil a un rôle de présentoire, on y voit la ville de nuit ainsi qu'un texte expliquant ce qu'on peut trouver sur le site.
+La section suivante est la présentation du dernier article publié sur le site. Enfin, une section géolocalisation permet de montrer où trouver la ville de Thionville. On trouve aussi le copyright et le bouton d'admin en bas de page. Ce "<footer"> est présent sur la totalité du site et des pages que l'on visite.
+\section{Actualité :}
+La page "<Actualité"> rassemble l'ensemble des articles publiés par le site. Ils sont présents sous la forme d'un carousel de 5 articles. Il est bien entendu possible de voir les articles plus anciens en navigant dans le carousel. On y trouve le titre, la date, l'auteur, le nombre de commentaire ainsi que les tags sur lesquels l'article est référencé. En cliquant sur le titre, on accède directement à l'article en question. Il n'est pas nécessaire de modifier quoi que ce soit sur cette page car le crousel se met à jour automatiquement.\\
+\includegraphics[scale = 0.38]{actualite}\\
+\newpage
+\section{Plus d'infos :}
+"<Plus d'infos"> évoque les diférents associations dont dispose la ville de Thionville. La page n'est pas rafraichie automatiquement en fonction des entrées ou sorties du site. Par concéquent pour le modifier il faut accéder à la partie "<Page"> du compte administrateur. La page dispose aussi d'un lien pour pouvoir envoyer un mail à l'adresse référente de chaque association.\\
+\includegraphics[scale = 0.38]{plus_dinfos}\\
+\newpage
+\section{Activité du mois :}
+Cette section a pour but de mettre à disposition des visiteurs, un tableau récapitulatif des activités à venir dans la ville. Elles vont de la date la plus récente à la plus ancienne pour que le lecteur ait les dernières nouvelles sous les yeux au lieu d'aller à la dernière page. Lors du clic sur inscription, une page avec un formulaire s'ouvre avec deux champs à remplir :
+\begin{itemize}
+	\item Son nom
+	\item Son email
+\end{itemize}\\
+Le nom de l'activité est déjà rempli.\\
+Une fois que l'utilisateur a renseigné les champs, un mail sera envoyé à l'administrateur avec un récapitualtif des informations saisies pour confirmer qu'il s'est inscrit à une activité choisie.\\
+\includegraphics[scale = 0.38]{activite}\\
+\includegraphics[scale = 0.38]{formulaire_inscription}\\
+\newpage
+\section{Contacts :}
+Cette dernière section sert à entrer en contact avec la mairie. Il suffit pour l'utilisateur de renseigner les champs et d'envoyer son message. Une fois les champs reiseignés, comme pour la page "<Plus d'infos">, un mail sera envoyé à l'administrateur avec le message de l'utilisateur. Cette page n'est pas à modifier sauf si vous avez besoin d'autres informations ou si vous considérez que certaines informations ne sont pas utiles.\\
+\includegraphics[scale = 0.38]{contact}\\
+\end{document}
