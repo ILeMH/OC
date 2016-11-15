@@ -38,3 +38,5 @@ On y présente :
 	* Liste des retombés presse et actualités
 Il souhaite que les billets puissent être acheté en ligne
 
+Lien notation :
+https://docs.google.com/spreadsheets/d/1qymkYJhbRXYxQoihhpda9_85jMYtEsUVuxb1xIKZhKk/edit#gid=0
