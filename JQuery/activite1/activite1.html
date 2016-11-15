@@ -28,21 +28,44 @@
 		  Utilisez ces boutons pour créer votre formulaire<br><br>
 		  <button id="label">Label</button>
 		  <button id="ZDT">Zone de texte</button>
-		  <button id="bouton">Bouton</button>
+		  <button id="bouton">Bouton</button><br>
+            <div id="contenu"></div>
 		</div>
 		
 		<script src="../jquery.js"></script>
 		
 		<script>
 			$(function (){
-				var droite = $('#droite');
-				var gauche = $('#gauche');
-				if($('#label'):checked){
-					
-					droite.append('<hr>');
-					droite.append('<form><p><label for="titre">Texte du label:</label><input type="text" name = )
-				}
+				var insererDroite = $('#bouton');
+				var insererGauche = $('#gauche');
+                var contenu = $('#contenu');
+                var contenuGauche ="";
+                
+                
+				$('#label').click( function (){
+					contenu.append('<form id="formLabel"><p><label for="titre">Texte du label:</label><input type="text" id="text" name = "titre"><input type="button" id="button" name="button" value ="ok"></p></form>');
+                    insererDroite.after('<hr class="ligne">');
+                $('#button').click( function () {
+                    contenuGauche = $('#text').val();
+                    insererGauche.append(contenuGauche);
+                    $('#formLabel').remove();
+                    $('.ligne').remove();
+                })
 			});
+                $('#ZDT').click( function () {
+                    insererDroite.after('<form id="formZDT"><p><label for="zone">id de la zone de texte</label><input type = "text" id="zone" name ="zone"><input type="button" id="buttonZone" value ="ok"></p></form>');
+                    insererDroite.after('<hr class="ligne">');
+                    
+                    $('#buttonZone').click( function (){
+                        valId= $('#zone').val()
+                        contenuGauche.append('<input type="text" id=ajouterId>');
+                        $('#ajouterId').attr('id', valId);
+                        insererGauche.append(contenuGauche);
+                        $('#formZDT').remove();
+                        $('.ligne').remove();
+                    })
+                })
+            });
 		
 		</script>
 	</body>
