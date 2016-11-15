@@ -133,7 +133,7 @@
   border-width:0px;
   position:absolute;
   left:2px;
-  top:5px;
+  top:4px;
   width:136px;
   word-wrap:break-word;
 }
@@ -442,7 +442,7 @@
   border-width:0px;
   position:absolute;
   left:2px;
-  top:13px;
+  top:12px;
   width:46px;
   word-wrap:break-word;
 }
@@ -1251,6 +1251,6 @@
   position:absolute;
   left:0px;
   top:0px;
-  width:364px;
+  width:369px;
   white-space:nowrap;
 }
