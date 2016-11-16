@@ -10,14 +10,31 @@
 				float: left;
 				width: 70%;
 				height: 1000px;
-				background-color: #EFECCA;
+				background-color: #EFECCA;				
 			  }
 			#droite {
 				background-color: #CEFFF8;
 				height: 1000px;
 				padding : 10px;
 				padding-left: 71%;
-			}    
+			}
+			.labelCSS{
+				font-weight: bold;
+				font-size: 25px;
+				padding-left: 20px;
+			}
+			.lesBoutons {
+				margin-left: 20px;
+				border-style: solid;
+				border-width: 5px;
+				border-radius: 5px;
+				min-width: 60px;
+				font-weight: bold;
+			}
+			.champ {
+				margin-left: 20px;
+			}
+			
 		</style>
 	</head>
 
@@ -32,22 +49,27 @@
             <div id="contenu"></div>
 		</div>
 		
-		<script src="../jquery.js"></script>
+		<script src="jquery.js"></script>
 		
 		<script>
 			$(function (){
 				var insererDroite = $('#bouton');
 				var insererGauche = $('#gauche');
                 var contenu = $('#contenu');
-                var contenuGauche ="";
+                var contenuLabel ="";
+				contenuLabel.id="labelCSS"
+				var contenuChamp="";
+				var contenuBouton="";
+				var cmp =0;
                 
                 
 				$('#label').click( function (){
 					contenu.append('<form id="formLabel"><p><label for="titre">Texte du label:</label><input type="text" id="text" name = "titre"><input type="button" id="button" name="button" value ="ok"></p></form>');
                     insererDroite.after('<hr class="ligne">');
                 $('#button').click( function () {
-                    contenuGauche = $('#text').val();
-                    insererGauche.append(contenuGauche);
+                    valTexte = $('#text').val();
+					contenuLabel = $('<p class = labelCSS lesTextes>'+valTexte+'</p>')
+                    insererGauche.append(contenuLabel);
                     $('#formLabel').remove();
                     $('.ligne').remove();
                 })
@@ -58,13 +80,26 @@
                     
                     $('#buttonZone').click( function (){
                         valId= $('#zone').val()
-                        contenuGauche.append('<input type="text" id=ajouterId>');
-                        $('#ajouterId').attr('id', valId);
-                        insererGauche.append(contenuGauche);
+						contenuChamp = $('<input type="text" class="champ"><br>');
+                        contenuLabel.append(contenuChamp);
+                        $('.champ').attr('id', valId);
                         $('#formZDT').remove();
                         $('.ligne').remove();
                     })
                 })
+				$('#bouton').click( function (){
+					insererDroite.after('<form id = formBouton><p><label for = "btn">Texte du bouton</label><input type ="text" id="btn" name="btn"><input type="button" id = "boutonBtn" value = "ok"></p></form>');
+					insererDroite.after('<hr class = "ligne">');
+					
+					$("#boutonBtn").click( function () {
+						valBtn = $('#btn').val();
+						contenuBouton = $('<button id = "nouveauBouton" class = "lesBoutons">'+valBtn+'</button>');
+						//$('#nouveauBouton').attr('value',valBtn);
+						insererGauche.append(contenuBouton);
+						$('#formBouton').remove();
+						$('.ligne').remove();
+					})
+				})
             });
 		
 		</script>
