@@ -1,26 +1,18 @@
-<!DOCTYPE html>
-<style type="text/css">
-  #balle {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border: black 2px solid;
-    border-radius : 10px;
-    position: relative;
-  }
-</style>
+<!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css">-->
 
-<body>
-  <div id="balle"></div>
-  <script src="jquery.js"></script>
-  <script>
-    $(function() {
-      function bis() {
-        $('#balle').animate({left: '+=200'}, 'slow')
-                   .animate({top: '+=200'}, 'slow')
-                   .animate({left: '-=200'}, 'slow')
-                   .animate({top: '-=200'}, 'slow');
-      };
-      setInterval(bis, 2400);
-    });
-  </script>
+<img id="redim" src="Images/zozor.png">
+
+<script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+<script>
+<script>
+  $(function() {
+    $("#redim").resizable();
+  });
+</script>

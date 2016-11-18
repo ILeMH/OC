@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+		body {
+			margin: 0;
+		}
+		#gauche {
+			float: left;
+			width: 70%;
+			height: 1000px;
+			background-color: #EFECCA;
+		}
+		#droite {
+			background-color: #CEFFF8;
+			height: 1000px;
+			padding : 10px;
+			padding-left: 71%;
+		}
+		span, button, input {
+			margin: 10px;
+		}
+		#btnok{
+			box-shadow: 4px 4px 4px #aaaaaa;
+		}
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+	
+	
+  <body>
+    <div id="gauche">
+    </div>
+    <div id="droite">
+      Utilisez ces boutons pour créer votre formulaire<br><br>
+      <button class="btnPrinc" id="btn1">Label</button>
+      <button class="btnPrinc" id="btn2">Zone de texte</button>
+      <button class="btnPrinc" id="btn3">Bouton</button>
+      <hr>
+    </div>
+	  
+    <script>
+      $(function(){
+		
+        $('#btn1').click(function(){
+          	$('hr').after($('<div id="conteneur">Texte du label <input type="text" id="tex"><button id="btnok">OK</button></div>'));
+			$('#conteneur').after($('<div id = "annuler"><button id="btnAnnuler">Annuler</button><div>'));
+			$('.btnPrinc').attr('disabled','true');
+			
+        	$('#btnok').click(function(){
+            	var lid =  $('<span>' + $('#tex').val() + '</span>').hide().fadeIn(1000);
+            	$('#gauche').append(lid);
+				$('#conteneur').fadeOut(1000);
+				$('.btnPrinc').removeAttr('disabled');
+			});
+			$('#btnAnnuler').on('click', function(){
+				$('#conteneur').fadeOut(1000);
+				$('#btnAnnuler').fadeOut(1000);
+				$('.btnPrinc').removeAttr('disabled');
+			})
+        });
+        $('#btn2').click(function(){
+          	$('hr').after('<div id="conteneur">id de la zone de texte <input type="text" id="tex"><button id="btnok">OK</button></div>');
+			$('#conteneur').after($('<div id = "annuler"><button id="btnAnnuler">Annuler</button><div>'));
+			$('.btnPrinc').attr('disabled','true');
+			
+          	$('#btnok').click(function(){
+            	var lid =  $('<input type="text" id="' + $('#tex').val() + '"><br>').hide().fadeIn(1000);
+            	$('#gauche').append(lid);
+            	$('#conteneur').fadeOut(1000);
+				$('.btnPrinc').removeAttr('disabled');
+          });
+			$('#btnAnnuler').on('click', function(){
+				$('.btnPrinc').attr('disabled','false');
+				$('#conteneur').fadeOut(1000);
+				$('#btnAnnuler').fadeOut(1000);
+				$('.btnPrinc').removeAttr('disabled');
+			})
+        });
+        $('#btn3').click(function(){
+          	$('hr').after('<div id="conteneur">Texte du bouton <input type="text" id="tex"><button id="btnok">OK</button></div>');
+			$('#conteneur').after($('<div id = "annuler"><button id="btnAnnuler">Annuler</button><div>'));
+			$('.btnPrinc').attr('disabled','true');
+          	$('#btnok').click(function(){
+            	var lid =  $('<button>' + $('#tex').val() + '</button>').hide().fadeIn(1000);
+            	$('#gauche').append(lid);
+            	$('#conteneur').fadeOut(1000);
+				$('.btnPrinc').removeAttr('disabled');
+          });
+			$('#btnAnnuler').on('click', function(){
+				$('#conteneur').fadeOut(1000);
+				$('#btnAnnuler').fadeOut(1000);	
+				$('.btnPrinc').removeAttr('disabled');
+			})
+        });
+      });
+    </script>
+	  
+  </body>
+</html>
