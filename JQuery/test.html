@@ -1,18 +1,19 @@
-<!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/base/jquery-ui.css">-->
+<!DOCTYPE html>
 
-<img id="redim" src="Images/zozor.png">
+<html>
 
-<script
-  src="https://code.jquery.com/jquery-3.1.1.js"
-  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-  crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-  crossorigin="anonymous"></script>
-<script>
-<script>
-  $(function() {
-    $("#redim").resizable();
-  });
-</script>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </head>
+
+  <body>
+    <span id="texteAdaptatif">Ce texte s’adapte à la largeur de la page</span>
+  <script src="jquery.js"></script>
+  <script src="WideText.js"></script>
+    <script>
+      $('#texteAdaptatif').wideText();
+      </script>
+    </body>
+
+</html>
