@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=Guide_utilisateur.tex
 
 [Frame0_View0,0]
-TopLine=40
+TopLine=0
 Cursor=3163
 
 [SessionInfo]
