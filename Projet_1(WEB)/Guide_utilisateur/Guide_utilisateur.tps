@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=32
-NormalPos.right=1562
+NormalPos.right=1484
 NormalPos.bottom=515
 Class=LaTeXView
 Document=Guide_utilisateur.tex
 
 [Frame0_View0,0]
-TopLine=70
-Cursor=5735
+TopLine=40
+Cursor=3163
 
 [SessionInfo]
 FrameCount=1

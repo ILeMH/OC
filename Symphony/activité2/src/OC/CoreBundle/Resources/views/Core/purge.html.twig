@@ -1,0 +1,9 @@
+{% block body %}
+{% for advert in listAdverts %}
+<p>
+    {{ advert.title }}</p>
+    {{ advert.content }} {{ advert.date|date("d/m/Y") }} <br />
+
+{% endfor %}
+
+{% endblock %}
