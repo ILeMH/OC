@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1300741448 source:d:\d_documents\openclassroom\oc\c++\frac\main.cpp
+	<iostream>
+	"ZFraction.h"
+
+1300651178 d:\d_documents\openclassroom\oc\c++\frac\zfraction.h
+	<iostream>
+
+1300741942 source:d:\d_documents\openclassroom\oc\c++\frac\zfraction.cpp
+	"ZFraction.h"
+	<cstdlib>
+

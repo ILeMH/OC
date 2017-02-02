@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1300206990 source:d:\d_documents\openclassroom\oc\c++\cours\main.cpp
+	<iostream>
+	<string>
+	"Personnage.h"
+
+1485788858 source:d:\d_documents\openclassroom\oc\c++\cours\doubler.cpp
+
+1485788806 d:\d_documents\openclassroom\oc\c++\cours\doubler.h
+
+1485870924 d:\d_documents\openclassroom\oc\c++\cours\personnages.h
+	<iostream>
+	<string>
+	"Arme.h"
+
+1485870510 source:d:\d_documents\openclassroom\oc\c++\cours\arme.cpp
+	"Arme.h"
+
+1300206956 d:\d_documents\openclassroom\oc\c++\cours\arme.h
+	<iostream>
+	<string>
+
+1300206928 d:\d_documents\openclassroom\oc\c++\cours\personnage.h
+	<iostream>
+	<string>
+	"Arme.h"
+

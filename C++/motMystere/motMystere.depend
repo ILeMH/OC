@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1485865200 source:d:\d_documents\openclassroom\oc\c++\motmystere\main.cpp
+	<iostream>
+	<string>
+	<ctime>
+	<cstdlib>
+	<fstream>
+
